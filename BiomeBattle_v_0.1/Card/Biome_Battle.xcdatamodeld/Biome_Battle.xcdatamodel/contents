@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12C2034" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Card" representedClassName="Card" syncable="YES">
+        <attribute name="backgroundGraphicImg" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="backgroundGraphicUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="card_color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="food_hierachy_img_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="foodHieraachyImg" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="graphic_artist" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="graphicImg" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="graphicUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="habitat1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="habitat2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="habitat3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hierarchy" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="latin_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="size" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="size_image_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sizeGraphicImg" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="cardImg" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="CardImg" inverseName="card" inverseEntity="CardImg" syncable="YES"/>
+    </entity>
+    <entity name="CardImg" representedClassName="CardImg" syncable="YES">
+        <attribute name="cardId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="img" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="card" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Card" inverseName="cardImg" inverseEntity="Card" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Card" positionX="342" positionY="153" width="128" height="315"/>
+        <element name="CardImg" positionX="45" positionY="156" width="128" height="105"/>
+    </elements>
+</model>
